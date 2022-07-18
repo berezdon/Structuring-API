@@ -25,7 +25,7 @@ function App() {
 
     React.useEffect(() => {
         const fetchArr = [];
-        for (let i = 1; i < 4; i++) {
+        for (let i = 1; i < totalPages; i++) {
             fetchArr.push(api.getPage(i));
         }
         console.log(fetchArr);
