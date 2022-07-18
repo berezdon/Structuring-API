@@ -28,7 +28,7 @@ function App() {
         for (let i = 1; i < totalPages; i++) {
             fetchArr.push(api.getPage(i));
         }
-        console.log(fetchArr);
+
         Promise.all(fetchArr)
             .then(values => {
                 setNames(values.map(value => value.items.map(item => item.name)))
